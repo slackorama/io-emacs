@@ -1,5 +1,4 @@
-;;; -*-Emacs-Lisp-*-
-;;; io-mode-inf.el - Interaction with an Io interpreter.
+;;; io-mode-inf.el --- Interaction with an Io interpreter.
 
 ;; Copyright (C) 2010 Seth Mason
 ;; Authors: Seth Mason

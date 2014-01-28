@@ -3,6 +3,7 @@
 ;; Copyright (C) 2010 Seth Mason
 ;; Authors: Seth Mason
 ;; Keywords: io languages
+;; URL: https://github.com/slackorama/io-emacs
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -128,4 +129,4 @@ Used for determining the default in the next one.")
 
 (provide 'io-mode-inf)
 
-;; io-mode-inf.el ends here
+;;; io-mode-inf.el ends here

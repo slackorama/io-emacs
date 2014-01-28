@@ -68,6 +68,7 @@
   (unless (io-interpreter-running-p-1)
     (error "Io interpreter not running")))
 
+;;;###autoload
 (defun io-run-io (&optional cmd-line)
   "Run a Io interpreter in an Emacs buffer"
   (interactive (list (if current-prefix-arg
@@ -87,12 +88,14 @@
   ;; (comint-send-string io-inf-buffer-name "\nemacs:end\n")) Heineman's contrib (06/03/2007)
   (comint-send-string io-inf-buffer-name "\n"))
 
+;;;###autoload
 (defun io-switch-to-interpreter ()
   "Switch to buffer containing the interpreter"
   (interactive)
   (io-check-interpreter-running)
   (switch-to-buffer io-inf-buffer-name))
 
+;;;###autoload
 (defun io-eval-region (start end)
   "Send current region to io interpreter."
   (interactive "r")
@@ -100,6 +103,7 @@
   (comint-send-region io-inf-buffer-name start end)
   (comint-send-string io-inf-buffer-name "\n"))
 
+;;;###autoload
 (defun io-eval-buffer ()
   "Send whole buffer to Io interpreter."
   (interactive)
@@ -110,6 +114,7 @@
 Caches the last pair used in the last io-load-file.
 Used for determining the default in the next one.")
 
+;;;###autoload
 (defun io-load-file (file-name)
   "Load a file in the Io interpreter."
   (interactive (comint-get-source "Load Io file: " io-prev-l/c-dir/file
@@ -120,6 +125,7 @@ Used for determining the default in the next one.")
                                       (file-name-nondirectory file-name)))
   (io-send-string "doFile(\"%s\")" file-name))
 
+;;;###autoload
 (defun io-quit-interpreter ()
   "Quit io interpreter."
   (interactive)
